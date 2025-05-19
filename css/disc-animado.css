@@ -1,0 +1,126 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.fondo{
+    background-color: #252525;
+    background-image: url('/img/anime-girl-sycthe-red-hair-horn-4k-wallpaper-uhdpaper.com-357@5@d.png');
+    background-size: cover;
+}
+/*________Fondo Discord___________*/
+.caja{
+    background-color: #151516   ;
+    display:flexbox;
+    margin: auto;
+    border-radius: 2rem;
+    margin-left: 27vw;
+    margin-inline-end: 27vw;
+}
+
+.perfil{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('/img/foto-perfil-steam.gif');
+    background-size: cover;
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50rem;
+    border-color: #000000;
+    margin-right: 32vw;
+    margin-top: 8vw;
+}
+.fondodisc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url('../img/D4Dj.gif');
+    background-size: cover;
+    height: 15vw;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;   
+}
+
+.cajaabajo{
+    display: flex;background-color: #2b3745;
+    padding: 20vw;
+    display: flex;
+    margin-top: 20vw;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+
+.txt_abajo{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 3vw;
+    padding: 2rem;
+    color: #ffffff;
+}
+
+.name{
+    font-size: 3vmin;
+    font-weight: bold;
+}
+
+.sobremi{
+    margin-top: 1vw;
+    font-size: 2vmin;
+}
+
+.bold{
+    font-size: 2vmin;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    font-weight: bold;
+}
+
+.linea{
+    width: 4vw;
+}
+
+.titulo{
+    padding: 3vw;
+    font-size: 6vmin;
+    color: #ffffff;
+    text-align: center;
+
+}
+/*____________- Bolitas________________*/
+.bolita{
+    background-color: #3f3f3f;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50vw;
+    margin-left: 6vw;
+    margin-top: 8vw;
+    padding: .5rem;
+    height: 2vw;
+    width: 2vw;
+}
+
+.bolitaVerde{
+    background-color: #49aa5e;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50vw;
+    margin-left: 15vw;
+    height: 1vw;
+    width: 1vw;
+    text-align: center  ;
+}
+/* esta madre es para cuando pasas el cursor    
+.perfil:hover{
+    padding: .5rem; 
+    background-color: #000000;
+}*/
+
+/*_____Conexiones estilos____________*/
+.btn{
+    background-color:#151516 ;
+    border-style:solid;
+    border-radius: 2vw;
+    padding: 1vw;
+    font-size: 1vw;
+    color: white;
+    text-decoration: none;
+}
