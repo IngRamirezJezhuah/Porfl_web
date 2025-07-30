@@ -2,12 +2,141 @@
     margin: 0%;
     padding: 0%;
 }
+
 .fondo{
-    background-color: #252525;
-    background-image: url('/img/anime-girl-sycthe-red-hair-horn-4k-wallpaper-uhdpaper.com-357@5@d.png');
-    background-size: cover;
-    padding: 2vw;
+    background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
+    background-size:cover;
+    background-repeat:space;
+    object-fit:cover;
 }
+
+.btn{
+    padding: 1vw;
+    background-color: #46464691;
+    border-radius: 3vw;
+    border-style: none;
+    color: #ffffff;
+}
+.btn a{
+    text-decoration: none;
+    
+}
+
+/*______ barra del nav______*/
+.checkbox-container {
+    /*position: relative;*/
+    display: inline-block;
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: 50px; /* Ajusta el tamaño de la imagen */
+    padding:1rem;
+}
+.check-cont-inp {
+    position: absolute;
+    /*opacity: 0;*/
+    cursor: pointer;
+    height: 10vh;
+    width: 10vh;
+}
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+nav {
+    float: left;
+}
+#menu ul {
+    list-style: none;
+    overflow: hidden; 
+}
+#menu ul li {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;;
+    font-size: 20px;
+}
+#menu ul li a {
+    display: block; 
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+#menu ul li:hover {
+    padding: 5px;
+    background: #03030368;
+    transition:cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000053;
+    color: white;
+    padding: 20px;
+    transition: top 0.3s ease-in-out; /* Animación suave */
+}
+.navbar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/*-----responsivo--------*/
+#btn-menu{
+    display: none;
+}
+header label{
+    width: 2rem;
+    height: 2rem;
+    padding: 1rem;
+    display: none;
+}
+header label:hover{
+    cursor: pointer;/*para los botones ponerle un apuntador*/
+}
+.menu-img{
+    width: 60px;
+    height:60px;
+}
+/*aplicar los estilos con la barra de navegacion con media query
+para que el menu se oculte y sea desplegable*/
+@media screen and (max-width:768px){
+    
+    header label{
+        display: block;
+    }
+    #menu{
+        position: absolute;
+        background-color: rgba(7, 7, 7, 0.538);
+        width: 20%;
+        margin-left: -20%;
+        transition: all 0.5s;
+    }
+    #menu ul{
+        flex-direction: column;
+    }
+
+    #menu li{
+        text-align: left;
+    }
+    /*utilizar elinput checkbox paracomtrolar el menu 
+    aparesca o desaparesca*/
+    /*condicion de css*/
+    #btn-menu:checked ~ #menu{
+        margin-left: 0%;
+    }
+    main{
+        margin: 1rem;
+    }
+    main p{
+        margin: 1rem;
+    }
+}
+/*-----responsivo--------*/
+
+
+
 /*________Fondo Discord___________*/
 .caja{
     background-color: #151516   ;
@@ -18,11 +147,10 @@
     margin-inline-end: 27vw;
 
 }
-
 .perfil{
     display: flex;
     flex-wrap: wrap;
-    background-image: url('/img/Iconsapp.png');
+    background-image: url('../img/god_maquina.png');
     background-size: cover;
     height: 10vw;
     width: 10vw;
@@ -35,13 +163,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
+    background-image: url('../img/Project_lain.png');
     background-size: cover;
     height: 15vw;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem;   
 }
-
 .cajaabajo{
     display: flex;background-color: #2b3745;
     padding: 20vw;
@@ -50,25 +177,21 @@
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
 }
-
-
 .txt_abajo{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 3vw;
     padding: 2rem;
     color: #ffffff;
 }
-
 .name{
     font-size: 4vmin;
     font-weight: bold;
+    color: #ffffff;
 }
-
 .sobremi{
     margin-top: 1vmin;
     font-size: 2vmin;
 }
-
 .bold{
     font-size: 2.5vmin;
     margin-bottom: 1vw;
@@ -76,11 +199,9 @@
     font-style: italic;
     font-weight: bold;
 }
-
 .linea{
     width: 4vw;
 }
-
 .titulo{
     padding: 3vw;
     font-size: 6vmin;
@@ -89,188 +210,39 @@
 
 }
 /*____________- Bolitas________________*/
+
 .bolita{
     background-color: #3f3f3f;
     display: flex;
     flex-wrap: wrap;
     border-radius: 50vw;
     margin-left: 6vw;
-    margin-top: 8vw;
-    padding: .5rem;
+    margin-top: 8.5vw;
     height: 2vw;
     width: 2vw;
 }
-
 .bolitaVerde{
-    background-color: #49aa5e;
+    background-color: #7cbe5b;
     display: flex;
     flex-wrap: wrap;
     border-radius: 50vw;
-    margin-left: 15vw;
-    height: 1vw;
-    width: 1vw;
-    text-align: center  ;
+    padding: .3rem;
+    height: .5vw;
+    width: .5vw;
+    margin-top: .5vw;
+    margin-left: .5vw;
 }
-/* esta madre es para cuando pasas el cursor    
-.perfil:hover{
-    padding: .5rem; 
-    background-color: #000000;
-}*/
-
 /*_____Conexiones estilos____________*/
-.btn{
-    background-color:#151516 ;
-    border-style:solid;
-    border-radius: 2vw;
+.imgperfil{
+    border-radius: 10vw;
     padding: 1vw;
-    font-size: 1vw;
-    color: white;
-    text-decoration: none;
 }
 
-/*__________animaciones_________*/
-/* ----------------------------------------------
-* Generated by Animista on 2025-5-11 15:19:30
-* Licensed under FreeBSD License.
-* See http://animista.net/license for more info. 
-* w: http://animista.net, t: @cssanimista
-* ---------------------------------------------- */
-
-/**
-* ----------------------------------------
-* animation scale-up-ver-center
-* ----------------------------------------
-*/
-
-.scale-up-ver-center {
-	animation: scale-up-ver-center 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+.ngro{
+    background-color:#000000 ;
+    padding: 5vw;
 }
 
-
-@keyframes scale-up-ver-center {
-    0% {
-        transform: scaleY(0.4);
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}
-
-.slide-top {
-	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-
-@keyframes slide-top {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-100px);
-    }
-}
-
-.tracking-in-expand-fwd {
-	animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-@keyframes tracking-in-expand-fwd {
-    0% {
-        letter-spacing: -0.5em;
-        transform: translateZ(-700px);
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.6;
-    }
-    100% {
-        transform: translateZ(0);
-        opacity: 1;
-    }
-}
-/*______ barra del nav______*/
-
-header{
-    width: 100%;
-    position: sticky;
-    top: 0%;
-}
-
-#btn-menu{
-    display: none;
-}
-
-header label{
-    width: 2rem;
-    height: 2rem;
-    padding: 1rem;
-    display: none;
-}
-header label:hover{
-    cursor: pointer;/*para los botones ponerle un apuntador*/
-}
-
-#menu ul{
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    display: flex;
-}
-#menu li{
-    flex-grow: 1;
-    text-align: right;
-    /*border: 1px solid rgb(185, 209, 209);*/
-}
-#menu li a{
-    text-decoration: none;
-    display:flexbox;
-    padding: 1vw 1vw;
-    color: rgb(191, 162, 162);
-    font-size: 2vw;
-    background: linear-gradient(to right, rgb(14, 6, 19), rgb(141, 70, 3));
-    border-radius: 12vw;
-}
-#menu li a:hover{
-    background-color: rgba(74, 181, 217, 0.4);
-    /*background-color: linear-gradient(to bottom right, rgb(77, 77, 243), rgb(161, 53, 207));*/
-}
-#menu li a:active{
-    background-color: rgba(9, 106, 139, 0.4);
-}
-/*aplicar los estilos con la barra de navegacion con media query
-para que el menu se oculte y sea desplegable*/
-
-@media screen and (max-width:768px){
-    
-    header label{
-        display: block;
-    }
-    #menu{
-        position: absolute;
-        /*background-color: rgb(19, 13, 27);*/
-        width: 20%;
-        margin-left: -20%;
-        transition: all 0.5s;
-    }
-    #menu ul{
-        flex-direction: column;
-    }
-
-    #menu li{
-        text-align: left;
-        padding: 1vmin;
-        /*border: 1px solid white;*/
-    }
-    /*utilizar elinput checkbox paracomtrolar el menu aparesca o desaparesca*/
-    /*condicion de css*/
-    #btn-menu:checked ~ #menu{
-        margin-left: 0%;
-    }
-
-    main{
-        margin: 1rem;
-    }
-    main p{
-        margin: 1rem;
-    }
+.trofeos{
+    padding: 2rem;
 }
