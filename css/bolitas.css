@@ -1,0 +1,93 @@
+/*____________- Bolitas________________*/
+
+.bolita{
+    background-color: #3f3f3f;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50vw;
+    margin-left: 6vw;
+    margin-top: 8.5vw;
+    height: 2vw;
+    width: 2vw;
+}
+.bolitaVerde{
+    background-color: #7cbe5b;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50vw;
+    padding: .3rem;
+    height: .5vw;
+    width: .5vw;
+    margin-top: .5vw;
+    margin-left: .5vw;
+}
+.bolita-contorno {
+    display: flex;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bolita-contorno li {
+    list-style: none;
+}
+.bolita-contorno li a {
+    width: 3.5vw;
+    height: 3.5vw;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+.bolita-contorno li a .logo {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+.bolita-contorno li a:hover .logo {
+    color: #fff;
+    transform: rotateY(360deg);
+}
+.bolita-contorno li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+.bolita-contorno li a:hover:before {
+    top: 0;
+}
+.bolita-contorno li:nth-child(1) a:before{
+    background: #acacac;
+}
+.bolita-contorno li:nth-child(2) a:before{
+    background: #55acee;
+}
+.bolita-contorno li:nth-child(3) a:before{
+    background: #5d55ee;
+}
+.bolita-contorno li:nth-child(4) a:before{
+    background: #b94415;
+}
+.bolita-contorno li:nth-child(5) a:before{
+    background: #169b4d;
+}
+.logo{
+    position: relative;
+    padding-top: .8vw;
+    height: 2vw;
+    width: 2vw;
+}

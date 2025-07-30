@@ -1,0 +1,59 @@
+/*______ barra del nav______*/
+.checkbox-container {
+    /*position: relative;*/
+    display: inline-block;
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: 50px; /* Ajusta el tamaño de la imagen */
+    padding:1rem;
+}
+.check-cont-inp {
+    position: absolute;
+    /*opacity: 0;*/
+    cursor: pointer;
+    height: 10vh;
+    width: 10vh;
+}
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+nav {
+    float: left;
+}
+#menu ul {
+    list-style: none;
+    overflow: hidden; 
+}
+#menu ul li {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;;
+    font-size: 20px;
+}
+#menu ul li a {
+    display: block; 
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+#menu ul li:hover {
+    padding: 5px;
+    background: #03030368;
+    transition:cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000053;
+    color: white;
+    padding: 20px;
+    transition: top 0.3s ease-in-out; /* Animación suave */
+}
+.navbar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+}

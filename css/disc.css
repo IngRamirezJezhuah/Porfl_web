@@ -22,65 +22,6 @@
     
 }
 
-/*______ barra del nav______*/
-.checkbox-container {
-    /*position: relative;*/
-    display: inline-block;
-    width: 50px; /* Ajusta el tamaño de la imagen */
-    height: 50px; /* Ajusta el tamaño de la imagen */
-    padding:1rem;
-}
-.check-cont-inp {
-    position: absolute;
-    /*opacity: 0;*/
-    cursor: pointer;
-    height: 10vh;
-    width: 10vh;
-}
-header {
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-}
-nav {
-    float: left;
-}
-#menu ul {
-    list-style: none;
-    overflow: hidden; 
-}
-#menu ul li {
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;;
-    font-size: 20px;
-}
-#menu ul li a {
-    display: block; 
-    padding: 20px;
-    color: #fff;
-    text-decoration: none;
-}
-#menu ul li:hover {
-    padding: 5px;
-    background: #03030368;
-    transition:cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
-}
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #00000053;
-    color: white;
-    padding: 20px;
-    transition: top 0.3s ease-in-out; /* Animación suave */
-}
-.navbar a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
-}
 
 /*-----responsivo--------*/
 #btn-menu{
@@ -99,6 +40,7 @@ header label:hover{
     width: 60px;
     height:60px;
 }
+/*-----responsivo--------*/
 /*aplicar los estilos con la barra de navegacion con media query
 para que el menu se oculte y sea desplegable*/
 @media screen and (max-width:768px){
@@ -133,9 +75,6 @@ para que el menu se oculte y sea desplegable*/
         margin: 1rem;
     }
 }
-/*-----responsivo--------*/
-
-
 
 /*________Fondo Discord___________*/
 .caja{
@@ -145,8 +84,16 @@ para que el menu se oculte y sea desplegable*/
     border-radius: 2rem;
     margin-left: 27vw;
     margin-inline-end: 27vw;
-
 }
+
+.caja-2{
+    background-color: #151516   ;
+    display:flexbox;
+    margin: auto;
+    border-radius: 2rem;
+    margin-right: 30vw;
+}
+
 .perfil{
     display: flex;
     flex-wrap: wrap;
@@ -178,12 +125,12 @@ para que el menu se oculte y sea desplegable*/
     border-bottom-left-radius: 2rem;
 }
 .txt_abajo{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 3vw;
+    font-family: "Goldman", sans-serif;
     padding: 2rem;
     color: #ffffff;
 }
 .name{
+    font-family: "Bitcount Prop Single", system-ui;
     font-size: 4vmin;
     font-weight: bold;
     color: #ffffff;
@@ -203,46 +150,103 @@ para que el menu se oculte y sea desplegable*/
     width: 4vw;
 }
 .titulo{
-    padding: 3vw;
+    padding: 1vw;
     font-size: 6vmin;
     color: #ffffff;
     text-align: center;
 
 }
-/*____________- Bolitas________________*/
 
-.bolita{
-    background-color: #3f3f3f;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 50vw;
-    margin-left: 6vw;
-    margin-top: 8.5vw;
-    height: 2vw;
-    width: 2vw;
-}
-.bolitaVerde{
-    background-color: #7cbe5b;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 50vw;
-    padding: .3rem;
-    height: .5vw;
-    width: .5vw;
-    margin-top: .5vw;
-    margin-left: .5vw;
-}
 /*_____Conexiones estilos____________*/
 .imgperfil{
     border-radius: 10vw;
     padding: 1vw;
 }
-
 .ngro{
     background-color:#000000 ;
     padding: 5vw;
 }
-
 .trofeos{
     padding: 2rem;
+}
+.lista-dev{
+    display: flex;
+    color: #fdfff1;
+    padding: 1vw;
+    font-family: "Bitcount Prop Single", system-ui;
+}
+.lista-dev li{
+    margin-top: 0%;
+    padding: .5vw;
+    font-size: 3vmax;
+    font-size: 2vmin;
+    list-style: none;
+}
+.img-etiquetas{
+    position: absolute;
+    width:19.5rem;
+    height:10rem;
+    border-radius: .5rem;
+}
+.text-etiquetas{
+    padding: 1rem;
+    font-size: 3vmax;
+    font-size: 2vmin;
+    color: #ffffff;
+}
+.text-repo{
+    margin-top: 10vw;
+    padding: 1rem;
+    font-size: 3vmax;
+    font-size: 2vmin;
+    color: #ffffff;
+}
+.text-repo-2{
+    padding: 1rem;
+    font-size: 3vmax;
+    font-size: 2vmin;
+    color: #ffffff;
+}
+.contactame{
+    padding: 1rem;
+    font-size: 3vmax;
+    font-size: 2vmin;
+    color: #ffffff;
+}
+/*_____________tarjetas de proyectos_________________*/
+.card {
+    width: 20rem;
+    height: 25rem;
+    margin: 1rem auto;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    /*align-items: center;
+    justify-content: center;*/
+    border-radius: 0.5rem;
+}
+.card-front {
+    background: rgba(17, 7, 43, 0.742);
+}
+.card-back {
+    background: #444248;
+    color: white;
+    transform: rotateY(180deg);
 }
