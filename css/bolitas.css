@@ -24,40 +24,43 @@
 .bolita-contorno {
     display: flex;
     position: relative;
-    top: 50%;
+    /*top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
 }
 .bolita-contorno li {
     list-style: none;
 }
 .bolita-contorno li a {
-    width: 3.5vw;
-    height: 3.5vw;
+    width: 60px;
+    height: 60px;
     background-color: #fff;
-    text-align: center;
+    margin: 5px;
+    /*text-align: center;
     line-height: 80px;
     font-size: 35px;
-    margin: 0 10px;
+    margin: 0 10px;*/
     display: block;
     border-radius: 50%;
-    position: relative;
+    /*position: relative;*/
     overflow: hidden;
     border: 3px solid #fff;
     z-index: 1;
 }
+
 .bolita-contorno li a .logo {
     position: relative;
     color: #262626;
     transition: .5s;
     z-index: 3;
 }
+
 .bolita-contorno li a:hover .logo {
     color: #fff;
     transform: rotateY(360deg);
 }
+
 .bolita-contorno li a:before {
-    content: "";
     position: absolute;
     top: 100%;
     left: 0;
@@ -85,9 +88,32 @@
 .bolita-contorno li:nth-child(5) a:before{
     background: #169b4d;
 }
+
 .logo{
     position: relative;
-    padding-top: .8vw;
-    height: 2vw;
-    width: 2vw;
+    margin-top: 10px;
+    margin-left: 10px;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+/* Para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .bolita-contorno {
+        flex-wrap: wrap; /* Que se acomoden en varias filas si no caben */
+        justify-content: center;
+        gap: 10px; /* espacio entre ellos */
+    }
+
+    .bolita-contorno li a {
+        width: 40px;   /* más grande que 3.5vw en móvil */
+        height: 40px;
+    }
+
+    .logo {
+        margin-top: 5px;
+        margin-left: 5px;
+        max-width: 30px; /* tamaño fijo para que se vean */
+        max-height: 30px;
+    }
 }
