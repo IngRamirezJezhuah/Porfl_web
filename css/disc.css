@@ -76,6 +76,26 @@ para que el menu se oculte y sea desplegable*/
     }
 }
 
+/* Por defecto (pantallas grandes) */
+#lista-1 {
+    display: block;
+}
+
+#lista-2 {
+    display: none;
+}
+
+/* En pantallas pequeñas (menores a 768px) */
+@media screen and (max-width:768px) {
+    #lista-1 {
+        display: none;
+    }
+    #lista-2 {
+        display: block;
+        margin: auto;
+    }
+}
+
 /*________Fondo Discord___________*/
 .caja{
     background-color: #151516   ;
@@ -84,15 +104,29 @@ para que el menu se oculte y sea desplegable*/
     border-radius: 2rem;
     margin-left: 27vw;
     margin-inline-end: 27vw;
+    margin-bottom: 1rem;
 }
 
 .caja-2{
     background-color: #151516   ;
     display:flexbox;
+    border-radius: 2rem;
+    margin: auto;
+    margin-right: 30%;
+    /*
+    margin-bottom: 1rem;
+    */
+}
+
+.caja-3{
+    background-color: #151516   ;
+    display:flexbox;
     margin: auto;
     border-radius: 2rem;
-    margin-right: 30vw;
+    margin-left: 30vw;
+    margin-bottom: 1rem;
 }
+
 
 .perfil{
     display: flex;
@@ -135,10 +169,12 @@ para que el menu se oculte y sea desplegable*/
     font-weight: bold;
     color: #ffffff;
 }
+
 .sobremi{
     margin-top: 1vmin;
     font-size: 2vmin;
 }
+
 .bold{
     font-size: 2.5vmin;
     margin-bottom: 1vw;
@@ -172,11 +208,12 @@ para que el menu se oculte y sea desplegable*/
 .lista-dev{
     display: flex;
     color: #fdfff1;
-    padding: 1vw;
     font-family: "Bitcount Prop Single", system-ui;
 }
 .lista-dev li{
     margin-top: 0%;
+    margin: 0%;
+    position: relative;
     padding: 5px;
     font-size: 3vmax;
     font-size: 1.9vmin;
@@ -204,9 +241,11 @@ para que el menu se oculte y sea desplegable*/
 .text-etiquetas{
     padding: 1rem;
     font-size: 3vmax;
-    font-size: 2vmin;
+    font-size: 1.8vmin;
     color: #ffffff;
+    overflow-wrap: break-word;
 }
+
 .text-repo{
     margin-top: 10vw;
     padding: 1rem;
@@ -220,11 +259,39 @@ para que el menu se oculte y sea desplegable*/
     font-size: 2vmin;
     color: #ffffff;
 }
-.contactame{
-    padding: 1rem;
-    font-size: 3vmax;
-    font-size: 2vmin;
-    color: #ffffff;
+
+.kaomoji{
+    font-size: 1vw;
+    
+}
+
+
+::details-content {
+    transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+    height: 0;
+    overflow: clip;
+    }
+
+    @supports (interpolate-size: allow-keywords) {
+    :root {
+        interpolate-size: allow-keywords;
+    }
+
+    [open]::details-content {
+        height: auto;
+    }
+    }
+
+    @supports selector(::details-content) {
+    .notice {
+        display: none;
+    }
+    }
+    @layer base {
+    body {
+        font-family: system-ui;
+        overflow-x: hidden;
+    }
 }
 /*_____________tarjetas de proyectos_________________*/
 .card {
