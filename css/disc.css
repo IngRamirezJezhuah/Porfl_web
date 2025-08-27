@@ -4,7 +4,7 @@
 }
 
 .fondo{
-    background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
+    background-image: url('../img/pikachu-relajado-en-una-jacuzzi-con-vista-al-bosque_3840x2160_.png');
     background-size:cover;
     background-repeat:space;
     object-fit:cover;
@@ -85,7 +85,17 @@ para que el menu se oculte y sea desplegable*/
     display: none;
 }
 
-/* En pantallas pequeñas (menores a 768px) */
+/*__________MediasQuery__________*/
+@media screen and (max-width:1228px) {
+    #lista-1 {
+        display: none;
+    }
+    #lista-2 {
+        display: block;
+        margin: auto;
+    }
+}
+/*
 @media screen and (max-width:768px) {
     #lista-1 {
         display: none;
@@ -95,6 +105,7 @@ para que el menu se oculte y sea desplegable*/
         margin: auto;
     }
 }
+*/
 
 /*________Fondo Discord___________*/
 .caja{
@@ -113,9 +124,8 @@ para que el menu se oculte y sea desplegable*/
     border-radius: 2rem;
     margin: auto;
     margin-right: 30%;
-    /*
     margin-bottom: 1rem;
-    */
+    
 }
 
 .caja-3{
@@ -240,8 +250,8 @@ para que el menu se oculte y sea desplegable*/
 }
 .text-etiquetas{
     padding: 1rem;
-    font-size: 3vmax;
-    font-size: 1.8vmin;
+    font-size: 1.8vmax;
+    /*font-size: 1.8vmin;*/
     color: #ffffff;
     overflow-wrap: break-word;
 }
@@ -330,3 +340,4 @@ para que el menu se oculte y sea desplegable*/
     color: white;
     transform: rotateY(180deg);
 }
+
