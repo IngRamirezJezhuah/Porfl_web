@@ -4,7 +4,7 @@
 }
 
 .fondo{
-    background-image: url('../img/pikachu-relajado-en-una-jacuzzi-con-vista-al-bosque_3840x2160_.png');
+    background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
     background-size:cover;
     background-repeat:space;
     object-fit:cover;
@@ -85,27 +85,6 @@ para que el menu se oculte y sea desplegable*/
     display: none;
 }
 
-/*__________MediasQuery__________*/
-@media screen and (max-width:1228px) {
-    #lista-1 {
-        display: none;
-    }
-    #lista-2 {
-        display: block;
-        margin: auto;
-    }
-}
-/*
-@media screen and (max-width:768px) {
-    #lista-1 {
-        display: none;
-    }
-    #lista-2 {
-        display: block;
-        margin: auto;
-    }
-}
-*/
 
 /*________Fondo Discord___________*/
 .caja{
@@ -113,8 +92,8 @@ para que el menu se oculte y sea desplegable*/
     display:flexbox;
     margin: auto;
     border-radius: 2rem;
-    margin-left: 27vw;
-    margin-inline-end: 27vw;
+    margin-left: 15vw;
+    margin-inline-end: 15vw;
     margin-bottom: 1rem;
 }
 
@@ -168,6 +147,12 @@ para que el menu se oculte y sea desplegable*/
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
 }
+
+.intro{
+    padding-top: 5vw;
+    align-items: center;
+}
+
 .txt_abajo{
     font-family: "Goldman", sans-serif;
     padding: 2rem;
@@ -242,12 +227,10 @@ para que el menu se oculte y sea desplegable*/
     font-size: 4vh;
     text-decoration:solid;
 }
-.img-etiquetas{
-    position: absolute;
-    width:19.5rem;
-    height:10rem;
-    border-radius: .5rem;
-}
+
+
+
+
 .text-etiquetas{
     padding: 1rem;
     font-size: 1.8vmax;
@@ -259,22 +242,41 @@ para que el menu se oculte y sea desplegable*/
 .text-repo{
     margin-top: 10vw;
     padding: 1rem;
-    font-size: 3vmax;
-    font-size: 2vmin;
+    font-size: 2vmax;
     color: #ffffff;
+    text-wrap: balance;
 }
+
 .text-repo-2{
     padding: 1rem;
     font-size: 3vmax;
     font-size: 2vmin;
     color: #ffffff;
+    text-decoration: none;
+}
+.text-link{
+    padding: 1rem;
+    font-size: 3vmax;
+    font-size: 2vmin;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .kaomoji{
-    font-size: 1vw;
+    font-size: 1.5vw;
     
 }
-
+.cont-caja1{
+    display:flex;
+    position: relative;
+}
+.foto{
+    display: block;
+    margin-right: 10vw;
+    height: 25vw;
+    width: 18vw;
+    border-radius: 5%;
+}
 
 ::details-content {
     transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
@@ -303,41 +305,21 @@ para que el menu se oculte y sea desplegable*/
         overflow-x: hidden;
     }
 }
-/*_____________tarjetas de proyectos_________________*/
-.card {
-    width: 20rem;
-    height: 25rem;
-    margin: 1rem auto;
-    perspective: 1000px;
-    cursor: pointer;
-}
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-.card:hover .card-inner {
-    transform: rotateY(180deg);
-}
-.card-front,
-.card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    /*align-items: center;
-    justify-content: center;*/
-    border-radius: 0.5rem;
-}
-.card-front {
-    background: rgba(17, 7, 43, 0.742);
-}
-.card-back {
-    background: #444248;
-    color: white;
-    transform: rotateY(180deg);
+
+/*__________MediasQuery__________*/
+@media screen and (max-width:1228px) {
+    #lista-1 {
+        display: none;
+    }
+    #lista-2 {
+        display: block;
+        margin: auto;
+    }
 }
 
+@media screen and (max-width:768px) {
+    .text-repo{
+    font-size :2vmin;
+    color: #ffffff;
+    }
+}
