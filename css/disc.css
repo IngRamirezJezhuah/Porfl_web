@@ -228,8 +228,10 @@ para que el menu se oculte y sea desplegable*/
     text-decoration:solid;
 }
 
-
-
+model-viewer{
+    width: 20vw;
+    height: 20vw;
+}
 
 .text-etiquetas{
     padding: 1rem;
