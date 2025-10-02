@@ -4,9 +4,11 @@
 }
 
 model-viewer{
-    /*margin-left: 20vw;*/
-    width: 20vw;
-    height: 20vw;
+    margin-left: 20vw;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color: #ad2323;
 }
 
 .fondo{
