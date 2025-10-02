@@ -3,6 +3,12 @@
     padding: 0%;
 }
 
+model-viewer{
+    /*margin-left: 20vw;*/
+    width: 20vw;
+    height: 20vw;
+}
+
 .fondo{
     background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
     background-size:cover;
@@ -228,10 +234,7 @@ para que el menu se oculte y sea desplegable*/
     text-decoration:solid;
 }
 
-model-viewer{
-    width: 20vw;
-    height: 20vw;
-}
+
 
 .text-etiquetas{
     padding: 1rem;
