@@ -8,7 +8,8 @@ model-viewer{
     width: 25vw;
     height: 25vw;
     border-radius: 50%;
-    background-color: #ad2323;
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(237, 221, 83, 1) 0%, rgba(87, 199, 133, 1) 50%,rgba(42, 123, 155, 1) 100%);
 }
 
 .fondo{
@@ -325,6 +326,15 @@ para que el menu se oculte y sea desplegable*/
 }
 
 @media screen and (max-width:768px) {
+    model-viewer{
+    padding: 6vw;
+    margin-left: 1vw;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(237, 221, 83, 1) 0%, rgba(87, 199, 133, 1) 50%,rgba(42, 123, 155, 1) 100%);
+    }
     .text-repo{
     font-size :2vmin;
     color: #ffffff;
