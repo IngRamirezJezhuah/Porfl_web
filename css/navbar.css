@@ -1,59 +1,145 @@
 /*______ barra del nav______*/
-.checkbox-container {
-    /*position: relative;*/
-    display: inline-block;
-    width: 50px; /* Ajusta el tamaño de la imagen */
-    height: 50px; /* Ajusta el tamaño de la imagen */
-    padding:1rem;
+* {
+    box-sizing: border-box;
 }
-.check-cont-inp {
-    position: absolute;
-    /*opacity: 0;*/
-    cursor: pointer;
-    height: 10vh;
-    width: 10vh;
-}
+
 header {
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 100;
+    background-color: #00000053;
 }
-nav {
-    float: left;
+
+/* Ocultar el checkbox */
+#btn-menu {
+    display: none;
 }
+
+/* Estilo del botón hamburguesa - oculto por defecto en desktop */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 101;
+}
+
+.menu-img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
 #menu ul {
     list-style: none;
-    overflow: hidden; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 #menu ul li {
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;;
-    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
+
 #menu ul li a {
     display: block; 
     padding: 20px;
     color: #fff;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
-#menu ul li:hover {
-    padding: 5px;
+
+#menu ul li a:hover {
     background: #03030368;
-    transition:cubic-bezier(0.445, 0.05, 0.55, 0.95) ;
+    transform: scale(1.05);
 }
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #00000053;
-    color: white;
-    padding: 20px;
-    transition: top 0.3s ease-in-out; /* Animación suave */
+
+/* ===== RESPONSIVE (Mobile) ===== */
+@media screen and (max-width: 768px) {
+    /* Mostrar el botón hamburguesa */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Menú oculto por defecto */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(7, 7, 7, 0.95);
+        padding-top: 70px;
+        transition: left 0.4s ease-in-out;
+        overflow-y: auto;
+    }
+
+    /* Cuando el checkbox está marcado, mostrar el menú */
+    #btn-menu:checked ~ .navbar {
+        left: 0;
+    }
+
+    /* Cambiar el layout del menú a vertical */
+    #menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    #menu ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    #menu ul li a {
+        padding: 15px 10px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    #menu ul li a:hover {
+        background: #03030368;
+        padding-left: 20px;
+    }
 }
-.navbar a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: inline-block;
+
+/* ===== TABLETS ===== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #menu ul li a {
+        padding: 15px;
+        font-size: 16px;
+    }
+}
+
+/* ===== PANTALLAS PEQUEÑAS ===== */
+@media screen and (max-width: 480px) {
+    .navbar {
+        width: 80%;
+    }
+
+    .menu-img {
+        width: 35px;
+        height: 35px;
+    }
 }

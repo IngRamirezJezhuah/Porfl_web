@@ -140,14 +140,21 @@
         <div class="caja-3" id="3d">
             <p class="text-etiquetas">Modelo 3d</p>
             <!--
-                <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-            -->
+                
+            <model-viewer src="./3d/anime_fox_girl/scene.gltf" 
+            poster="./img/yui_wachando.png" camera-controls
+            camera-orbit="-10deg 90deg 5m" auto-rotate autoplay 
+            disable-zoom>
+        </model-viewer>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+        -->
             <script type="module" src="./js/modelos-3d.js"></script>
             
             <model-viewer src="./3d/just_a_girl.glb" 
-                poster="./img/yui_wachando.png" camera-controls
-                camera-orbit="-10deg 90deg 5m" auto-rotate autoplay 
-                disable-zoom>
+                poster="./img/yui_wachando.png" camera-controls 
+                camera-orbit="-10deg 90deg 5m"
+                auto-rotate autoplay 
+                >
             </model-viewer>
             <footer>
                 <a href="https://sketchfab.com/Kensyouen">
