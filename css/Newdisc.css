@@ -2,7 +2,7 @@
     margin: 0%;
     padding: 0%;
 }
-/*Animacion de inicio
+/*Animacion de inicio*/
 .caja {
     position: absolute;
     top: 50%;
@@ -12,7 +12,7 @@
     border-bottom: .7vw solid #fff;
     overflow: hidden;
     animation: anim 2.5s linear forwards;
-    animation-duration: 4s;
+    animation-duration: 3s;
     background-color: #1d1d1f83;
 }
 .caja h1{
@@ -50,36 +50,70 @@
         height: 0%;
     }
 }
-*/
+
+/*____________- pagina Discord________________*/
 .fondo{
     background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
     background-size:cover;
     background-repeat:space;
     object-fit:cover;
+    position: relative;
 }
-
 .discord-body {
     background-color: #000000;
     margin-left: 4vw;
-    height: 80vh;
+    height: auto;
     width: 50vw;
     color: #ffffff;
     border-radius: 2rem;
-    
+    display: inline-block;
+    display:flexbox;
+
 }
 .img-fond-disc{
     justify-content: space-around;
     background-image: url('../img/Project_lain.png');
     background-size:cover;
-    height: 10vh;
-    width: 30vw;
+    height: 15vh;
+    width: 50vw;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem; 
     
 }
-
 .kaomoji{
-    font-size: .8vw;
+    font-size: 1.3vh;
+    margin-right: 10vw;
+}
+.caja{
+    width: 1vh;
+}
+.txt_nombre{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 4vh;
+    font-family: "Bitcount Prop Single", system-ui;
+    padding: 0 4vh 0 4vh;
+}
+.txt2{
+    padding-left: 2vw;
+    font-family: sans-serif;
+    font-size: 2.5vh;
+    border-bottom: .4vh solid #fff;
+    width: 30%;
+}
+.txt{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 4vh;
+    font-size: 3vh;
+}
+@media screen and (max-width: 1000px) {
+    .kaomoji{
+    font-size: 1vh;
+    margin: 0%;
+    }
+    .txt{
+        font-size: 2vh;
+    }
+    
 }
 
 /*____________- Bolitas________________*/
