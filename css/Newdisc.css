@@ -51,7 +51,6 @@
     }
 }
 
-/*____________- pagina Discord________________*/
 .fondo{
     background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
     background-size:cover;
@@ -59,15 +58,25 @@
     object-fit:cover;
     position: relative;
 }
+.acomodar{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2vh 2vw;
+}
+
+.img-yo{
+    height: 50vh;
+    width: 30vw;
+    border-radius: 2rem;
+    margin-left: 15vw ;
+}
+/*____________- pagina Discord________________*/
 .discord-body {
     background-color: #000000;
-    margin-left: 4vw;
     height: auto;
     width: 50vw;
     color: #ffffff;
     border-radius: 2rem;
-    display: inline-block;
-    display:flexbox;
 
 }
 .img-fond-disc{
@@ -231,5 +240,59 @@
         max-width: 20px; /* tamaño fijo para que se vean */
         max-height: 20px;
     }
+}
+
+/* paralax*/
+.parteabajo{
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    background-color: #3ba57d;
+    background: linear-gradient(#18642d,#20693b,#ecfe90,#fff7c5);
+}
+
+section{
+    position: relative;
+    transform-style: inherit;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+
+#heroe-1::before{
+    background-image: url("/img/god_maquina.png");
+    background-size: cover;
+    z-index: -1;
+}
+
+#heroe-2::before{
+    background-image: url("/img/pixel-art-wonit.jpg");
+    background-size: cover;
+    transform: translateZ(-1px)scale(2);
+    z-index: -2;
+}
+
+#heroe-3::before{
+    background-image: url("/img/mega-poste-waifu.jpg");
+    background-size: cover;
+}
+.heroe{
+    margin: auto;
+}
+
+.contenedor{
+    margin: auto;
 }
 
