@@ -51,6 +51,8 @@
     }
 }
 
+
+
 .fondo{
     background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
     background-size:cover;
@@ -58,23 +60,32 @@
     object-fit:cover;
     position: relative;
 }
+
 .acomodar{
     display: flex;
-    justify-content: flex-end;
-    padding: 2vh 2vw;
+    padding: 1vw;
+    margin: 15vh 25vw 22vh 22vw ;
+    background: linear-gradient(to bottom, #282828, #000000);
+    
 }
 
-.img-yo{
-    height: 50vh;
-    width: 30vw;
-    border-radius: 2rem;
-    margin-left: 15vw ;
-}
+
 /*____________- pagina Discord________________*/
+.tv{
+    width: 20vw;
+    height: 20vh;
+}
+.profile{
+    width: 10vw;
+    height: 20vh;
+    border-radius: 5rem;
+    border: solid 5px #272727;
+}
+
 .discord-body {
-    background-color: #000000;
+    background-color: #272727;
     height: auto;
-    width: 50vw;
+    width: 40vw;
     color: #ffffff;
     border-radius: 2rem;
 
@@ -84,7 +95,7 @@
     background-image: url('../img/Project_lain.png');
     background-size:cover;
     height: 15vh;
-    width: 50vw;
+    width: 40vw;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem; 
     
