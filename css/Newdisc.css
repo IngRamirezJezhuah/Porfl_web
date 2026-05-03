@@ -54,11 +54,11 @@
 
 
 .fondo{
+    position: relative;
     background-image: url('../img/virtual-date-anime-girl-hatsune-miku-2k-wallpaper-394a.png');
     background-size:cover;
     background-repeat:space;
     object-fit:cover;
-    position: relative;
 }
 
 .acomodar{
@@ -74,10 +74,7 @@
     border: solid 10px #272727;
 }
 
-.discord-body {
-    background-color: #272727;
-    height: auto;
-    width: 40vw;
+    .discord-body {
     color: #ffffff;
     border-radius: 2rem;
 
@@ -87,7 +84,7 @@
     background-image: url('../img/Project_lain.png');
     background-size:cover;
     height: 15vh;
-    width: 40vw;
+    width: 39.5vw;
     border-top-right-radius: 2rem;
     border-top-left-radius: 2rem; 
     
@@ -130,10 +127,10 @@
 
 /*______________Efecto TV CTR___________*/
 #tele {
-    width: 90vh;
+    width: 94vw;
     height: 85vh;
     background: #333;
-    border-radius: 20px;
+    border-radius: 10rem;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -141,61 +138,120 @@
     border: 4px solid #1a1a1a;
     box-shadow: 10px 10px 0px  #111;
     position: relative;
-    align-items: inset -5 -5px 15px #000, 10px 10px 30px rgba(0,0,0,0.5);
+    align-items: inset -5 -5px 15px #00000000, 10px 10px 30px rgba(0,0,0,0.5);
     margin: 20px auto;
 }
 
+
 .panel-botones{
     display: flex;
+    width: 60vw;
+    height: 100vh;
+    margin-top: 2rem;
+    margin-left: 25rem;
+    align-content: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
+    background: #000000;
 }
 
 button {
-    background: #444;
-    color: #0f0;
-    border: 2px solid #000;
+    background: #494747;
+    color: rgb(13, 12, 12);
+    margin: 2vh 2vw 2vh 2vw;
+    /*border: 2px solid #000;*/ 
+    border-radius: 5rem solid ;
     padding: 10px;
     cursor: pointer;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif   ;
     box-shadow: 2px 2px 0px #000;
 }
 
+button:active {
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 0px 0px #000;
+    transform: translate(2px, 2px);
+}
 
+.perilla {
+    margin: 2vh 2vw 2vh 2vw;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, #444 0%, #222 100% );
+    border: 3px solid #000;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.perilla::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 4px;
+    height: 12px;
+    background: #ff0000;
+    border-radius: 2px;
+    transform: translateX(-50);
+}
 
 #pantallacrt {
-    flex-grow: 1;
-    height: 100%;
-    background: #1a1a1a;
-    border-radius: 15% / 10%;
     position: relative;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    background: #050505;
+    border: 15px solid #1a1a1a;
+    border-radius: 20px;
     overflow: hidden;
-    border: 15px solid #111;
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 1), 0 10px 20px rgba( 0, 0, 0, 0.5);
+    flex-grow: 1;
 }
 
 .ctr-overlay {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: linear-gradient(
-        rgba(18,16,16,0) 50%,
-        rgba(0,0,0,1) 50%,
-    ),
-    linear-gradient(
-        90deg, rgba(255,0,0,0.03), 
-        rgba(0,255,0,0.01), 
-        rgba(0,0,255,0.03)
-    );
-    background-size: 100% 3px, 3px 100%;
-    pointer-events: none; /*chingadera para picarle a lo que haya abajo*/
     z-index: 10;
+    pointer-events: none; /*chingadera para picarle a lo que haya abajo*/
+    background: linear-gradient(
+        rgba(18,16,16,0) 25%,
+        rgba(0,0,0,0.15) 25%,
+        rgba(18,16,16,0) 25%,
+        rgba(0,0,0,0.15) 25%,
+    ),
+    linear-gradient( 90deg, rgba(255,0,0,0.03),  rgba(0,255,0,0.01), rgba(0,0,255,0.04));
+    background-size: 100% 4px, 4px 100%;
+    animation: flicker 0.15 infinite;
+}
+
+@keyframes flicker{
+    0% {opacity: 0.98;}
+    50% {opacity: 1;}
+    100% {opacity: 0.99;}
+}
+
+#pantallactr::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: radial-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 100%), 
+                linear-gradient(rgba(18, 16, 16, 0) 0%, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 100%);
+    z-index: 3;
+    background-size: 100% 2px;
+    pointer-events: none;
 }
 
 #contenedor-dinamico {
+    position: relative;
+    z-index:1;
     padding: 20px;
-    height: 100%;
-    overflow-y: auto;
+    height: 80vh;
+    width: 100%;
+    /*overflow-y: auto;*/
 }
 
 

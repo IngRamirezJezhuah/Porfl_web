@@ -1,26 +1,42 @@
 const screen = document.getElementById('screen');
 
-function changeChannel(view){
-    //añade efectos de estatica visual
-    fetch(`${view}.html`)
-        .then(response => response.text())
-        .then(html => {
-            screen.innerHTML = html;
-            //reiniciar los scripts especificos segun la vista si es neecesario
-        });
-}
+
+
+let anguloPerilla = 0;
 
 function cambiarCanal(canal) {
-    const contenedor = document.getElementById('contenido-dinamico');
-    // la animacion de estatica del ctr
-    document.getElementById('pantallactr').style.opacity = 0.5;
-    fetch(`${canal}.html`)
-        .then(response => response.text())
+    const contenedor = document.getElementById('contenedor-dinamico');
+    const pantalla = document.getElementById('pantallactr');
+    const perilla = document.querySelector('.perilla');
+
+    pantalla.style,opacity = "0.5"
+    pantalla.style.filter= "constrats(150%) brightness(2) blur(10px)";
+    
+    anguloPerilla += 45;
+    if(perilla) perilla.style.transform = `rotate(${anguloPerilla}deg)`;
+
+    //document.getElementById('pantallactr').style.opacity = 0.5;
+    fetch(`             /${canal}.html`)
+        .then(response => {
+            if (!response.ok) throw new  Error('Canal no encontrado');
+            return response.text();
+        })
         .then(data => {
             setTimeout(() => {
-                contenedor.innerHTML = data;
-                document.getElementById(pantallactr).style.opacity= "1";
-            }, 300);
+                if (contenedor) {
+                    contenedor.innerHTML = data;
+                }
+                if (pantalla) {
+                    
+                    pantalla.style.opacity = "1";
+                    pantalla.style.filter = "none";
+                }
+            }, 100);
         })
-        .catch(err => console.error("error al sincronizar:", err));
+        .catch(err => {
+            console.error("error al sincronizar:", err);
+            contenedor.innerHTML = "<div style='color:white;text-align:center;'><h1>SIN SEÑAL</h1><p>404 NOT FOUND</p></div>";
+            pantalla.style.opacity = "1";
+            pantalla.style.filter = "none"; 
+        });
 }
